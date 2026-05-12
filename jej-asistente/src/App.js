@@ -169,7 +169,7 @@ function ChatScreen({ user, onLogout }) {
         body: JSON.stringify({ chatInput: text, sessionId: sessionId() }),
       });
       const data = await res.json();
-      const reply = data.response || data.output || 'No pude obtener una respuesta. Intenta nuevamente.';
+      const reply = data.response || data.output || data[0]?.output || data[0]?.response || 'No pude obtener una respuesta.';
       setMessages(m => [...m, { role: 'assistant', text: reply, time: now() }]);
     } catch {
       setMessages(m => [...m, { role: 'assistant', text: 'Error de conexión. Verifica tu red e intenta nuevamente.', time: now() }]);
