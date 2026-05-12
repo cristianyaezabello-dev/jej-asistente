@@ -22,7 +22,7 @@ const USUARIOS = [
   { correo: 'demo@jej.cl',       rut: '111111111', nombre: 'Usuario Demo' },
 ];
 
-const WEBHOOK = 'https://kimozabee.app.n8n.cloud/webhook/rag-jej';
+const WEBHOOK = '/api/rag';
 
 function formatRut(val) {
   const clean = val.replace(/[^0-9kK]/g, '').toUpperCase();
