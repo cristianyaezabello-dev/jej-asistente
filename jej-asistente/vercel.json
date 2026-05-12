@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/rag",
+      "destination": "https://kimozabee.app.n8n.cloud/webhook/rag-jej"
+    }
+  ]
+}
