@@ -66,8 +66,10 @@ function LoginScreen({ onLogin }) {
     setError('');
     setLoading(true);
     await new Promise(r => setTimeout(r, 600));
+    const normRut = r => r.replace(/\./g, '').replace(/\s/g, '').toUpperCase();
     const user = USUARIOS.find(
-      u => u.correo.toLowerCase() === correo.toLowerCase().trim() && u.rut === rut.trim()
+      u => u.correo.toLowerCase() === correo.toLowerCase().trim() &&
+           normRut(u.rut) === normRut(rut)
     );
     if (user) { onLogin(user); }
     else { setError('Correo o RUT no registrado. Contacta a tu supervisor.'); }
