@@ -19,9 +19,9 @@ const C = {
 
 // ── Usuarios autorizados (reemplazar con Supabase Auth en prod) ──
 const USUARIOS = [
-  { correo: 'operario@jej.cl',     rut: '12345678-9', nombre: 'Carlos Ramírez' },
-  { correo: 'supervisor@jej.cl',   rut: '98765432-1', nombre: 'Ana Torres' },
-  { correo: 'demo@jej.cl',         rut: '11111111-1', nombre: 'Usuario Demo' },
+  { correo: 'operario@jej.cl',     rut: '12.345.678-9', nombre: 'Carlos Ramírez' },
+  { correo: 'supervisor@jej.cl',   rut: '98.765.432-1', nombre: 'Ana Torres' },
+  { correo: 'demo@jej.cl',         rut: '11.111.111-1', nombre: 'Usuario Demo' },
 ];
 
 const WEBHOOK = 'https://kimozabee.app.n8n.cloud/webhook/rag-jej';
